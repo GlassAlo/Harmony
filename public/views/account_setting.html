@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS that takes care of the navbar-->
+    <link rel="stylesheet" href="../css/global/navbar.css">
+    <!--Emoji-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <meta charset="utf-8">
+    <!--CSS for the page-->
+    <link rel="stylesheet" href="../css/global/mon_style.css">
+    <!--For screen size adaptation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <title>Support</title>
+</head>
+<body>
+    <!--navbar-->
+    <div class="inner-width">
+        <a href="#" class="logo" hidden><img src="/logo.jpg" id="logo" alt="" style="width:300px;height:250px";></a>
+        <i class="menu-toggle-btn fas fa-bars" id="menu"></i>
+        <nav class="navigation-menu">
+            <a href="../views/home.html"><i class="fas fa-home home"></i> Accueil</a>
+            <a href="../views/login.html"><i class="fas fa-users team"></i> Se connecter</a>
+            <a href="../views/support.html"><i class="fas fa-headset contact"></i> Support</a>
+        </nav>
+        <h1>Page Compte</h1>
+        <h3>Harmony</h3>
+        <form id="Username" >
+            <input type="text" placeholder="Nom d'utilisateur" id="UsernameText">
+            <input type="submit" value="Changer le Nom d'utilisateur" id="UsernameSubmit">
+        </form>
+        
+        <br>
+        <form id="email">
+            <input type="email" placeholder="E-mail" id="emailText">
+            <input type="submit" value="Changer l'e-mail" id="emailSubmit">
+        </form>
+        
+        <br>
+        <form id="Password">
+            <input type="text" placeholder="Changer le mot de passe" id="PasswordText">
+            <input type="text" placeholder="Confirmer le changement de mot de passe">
+            <input type="text" placeholder="Ancien mot de passe">
+            <input type="submit" value="Changer le mot de passe" id="PasswordSubmit">
+        </form>
+        
+        <br>
+        <form>
+            <select id="object">
+            <option value="1"> -- Définir le statut -- </option>
+            <option value="2"> En ligne </option>
+            <option value="3"> Ne pas déranger </option>
+            <option value="4"> Absent </option>
+            <option value="5"> Hors ligne </option>
+        </select>
+        <br>
+        <input type="text" placeholder="Statut">
+        <input type="submit" value="Changer le statut">
+
+        </form>
+        
+        <br>
+        <form>
+            <input type="file" name="PFP">
+            <input type="submit" value="Envoyer">
+        </form>
+        
+        <br>
+        <form>
+            <select id="object">
+            <option value="1"> -- Thème -- </option>
+            <option value="2"> Mode jour </option>
+            <option value="3"> Mode nuit </option>
+        </select>
+        <input type="submit" value="Changer le thème">
+        </form>
+        
+        <br>
+        <form>
+            <select id="object">
+            <option value="1"> -- Langue -- </option>
+            <option value="2"> Anglais </option>
+            <option value="3"> Coréen </option>
+            <option value="4"> Français </option>
+        </select>
+        <input type="submit" value="Changer la langue">
+        </form>
+        
+        <br>

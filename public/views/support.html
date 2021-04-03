@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS that takes care of the navbar-->
+    <link rel="stylesheet" href="../css/global/navbar.css">
+    <!--Emoji-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <meta charset="utf-8">
+    <!--CSS for the page-->
+    <link rel="stylesheet" href="../css/global/mon_style.css">
+    <!--For screen size adaptation-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <title>Support</title>
+</head>
+<body>
+    <!--navbar-->
+    <div class="inner-width">
+        <a href="#" class="logo" hidden><img src="/logo.jpg" id="logo" alt="" style="width:300px;height:250px";></a>
+        <i class="menu-toggle-btn fas fa-bars" id="menu"></i>
+        <nav class="navigation-menu">
+            <a href="../views/home.html"><i class="fas fa-home home"></i> Accueil</a>
+            <a href="../views/login.html"><i class="fas fa-users team"></i> Se connecter</a>
+            <a href="../views/support.html"><i class="fas fa-headset contact"></i> Support</a>
+        </nav>
+    </div>
+    <h1>Feedback</h1>
+    <form if="support_ask" method="POST" action="support">
+    <select id="object">
+        <option value="1"> -- choisir -- </option>
+        <option value="2"> Problème de connexion </option>
+        <option value="3"> Problème de payement </option>
+        <option value="4"> Signaler un utilisateur </option>
+        <option value="5"> Autre </option>
+    </select>
+    <input type="text" placeholder="Description">
+    <input type="submit" placeholder="Envoyer">
+    </form>
+</body>
+</html>

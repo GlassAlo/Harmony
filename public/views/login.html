@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <!--Formulaire permettant la connection-->
+  <head>
+    <title>Harmony</title>
+    <!--CSS that takes care of the navbar-->
+    <link rel="stylesheet" href="../css/connection/navbar_connect.css" />
+    <!--Emoji-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <meta charset="utf-8" />
+    <!--CSS for the page-->
+    <link rel="stylesheet" href="../css/connection/form_style_connect.css" />
+    <!--For screen size adaptation-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <!--Connection area-->
+
+    <h1>Harmony</h1>
+    <!--navbar-->
+    <div class="inner-width">
+      <i class="menu-toggle-btn fas fa-bars" id="menu"></i>
+      <nav class="navigation-menu">
+        <a href="../views/home.html"><i class="fas fa-home home"></i> Accueil</a>
+        <a href="../views/support.html"
+          ><i class="fas fa-headset contact"></i> Support</a
+        >
+      </nav>
+    </div>
+    <form class="box" action="/login" method="post">
+      <!--Every elements : input, can be button, text area or password field-->
+      <input type="text" name="username" placeholder="Identifiant" id="Identifiant" required/>
+      <input
+        type="password"
+        name="password"
+        placeholder="Mot de passe"
+        id="password"
+        required
+      />
+      <input type="button" name"" value="Montrer le mot de passe" id="show" ><br />
+      <input
+        type="button"
+        name="forget"
+        value="Vous avez oublié votre mot de passe ?"
+        onclick="parent.location=`../views/support.html`"
+      /><br />
+      <input
+        type="submit"
+        name=""
+        value="Login"
+      />
+    </form>
+    <!--Import js for navbar-->
+    <script src="../javascript/navbar.js"></script>
+    <!--import js to make a functionnal show password button -->
+    <script src="../javascript/show_password.js"></script>
+  </body>
+</html>
