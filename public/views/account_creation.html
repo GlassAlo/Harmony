@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <!--Page une fois connecté -->
+  <head>
+    <title>Harmony</title>
+
+    <meta charset="utf-8" />
+<link rel="stylesheet" href="../css/connection/navbar_connect.css" />
+    <link rel="stylesheet" href="../css/connection/form_style_connect.css" />
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="inner-width">
+      <a href="#" class="logo"><img src="/logo.jpg" alt="" /></a>
+      <i class="menu-toggle-btn fas fa-bars" id="menu"></i>
+      <nav class="navigation-menu">
+        <a href="../views/home.html"
+          ><i class="fas fa-home home"></i> Accueil</a
+        >
+        <a href="../views/account_setting.html"
+          ><i class="fas fa-users team"></i>Votre compte</a
+        >
+        <a href="../views/support.html"
+          ><i class="fas fa-headset contact"></i> Support</a
+        >
+      </nav>
+    </div>
+    <h1><em>Harmony</em></h1>
+    <h2>Création de compte</h2>
+    <form class="box" name="account_creation" method="post" action="/create">
+      <input
+        type="text"
+        name="username"
+        placeholder="Identifiant"
+        id="Identifiant"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Mot de passe"
+        id="password"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="email"
+        id="email"
+        required
+      />
+      <input 
+        type="submit"
+        value="Créer votre compte !"
+      >
+    </form>
+
+    <script src="../javascript/navbar.js"></script>
+  </body>
+</html>

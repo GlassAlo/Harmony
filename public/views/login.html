@@ -27,7 +27,9 @@
     <div class="inner-width">
       <i class="menu-toggle-btn fas fa-bars" id="menu"></i>
       <nav class="navigation-menu">
-        <a href="../views/home.html"><i class="fas fa-home home"></i> Accueil</a>
+        <a href="../views/home.html"
+          ><i class="fas fa-home home"></i> Accueil</a
+        >
         <a href="../views/support.html"
           ><i class="fas fa-headset contact"></i> Support</a
         >
@@ -35,7 +37,13 @@
     </div>
     <form class="box" action="/login" method="post">
       <!--Every elements : input, can be button, text area or password field-->
-      <input type="text" name="username" placeholder="Identifiant" id="Identifiant" required/>
+      <input
+        type="text"
+        name="username"
+        placeholder="Identifiant"
+        id="Identifiant"
+        required
+      />
       <input
         type="password"
         name="password"
@@ -51,10 +59,12 @@
         onclick="parent.location=`../views/support.html`"
       /><br />
       <input
-        type="submit"
-        name=""
-        value="Login"
-      />
+        type="button"
+        name="creation"
+        value="Vous n'avez pas encore de compte ?"
+        onclick="parent.location=`../views/account_creation.html`"
+      /><br />
+      <input type="submit" name="" value="Login" />
     </form>
     <!--Import js for navbar-->
     <script src="../javascript/navbar.js"></script>
