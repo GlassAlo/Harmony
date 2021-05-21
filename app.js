@@ -4,7 +4,7 @@ var express = require('express')
 var session = require('express-session')
 var bodyParser = require('body-parser')
 var path = require('path');
-let {PythonShell} =require('python-shell');
+let { PythonShell } = require('python-shell');
 var http = require('http').createServer(app);
 //creating a connection to the database
 var connection = mysql.createConnection({
@@ -81,21 +81,61 @@ app.post('/create', function (req, res) {
 app.post('/support', function (req, res) {
     var options = {
         args:
-        [
-            req.body.username,
-            req.body.email,
-            req.body.reason,
-            req.body.description
-        ]
+            [
+                req.body.username,
+                req.body.email,
+                req.body.reason,
+                req.body.description
+            ]
     }
-    
+
     PythonShell.run('public/python/support_handler.py', options, function (err) {
         if (err) res.send(err);
         console.log("database updated")
-      });
-    
+    });
+
     //send a new view to the user
     res.redirect("/views/res_support.html")
 })
 
+app.post('/changeUsername', function (req, res) {
+    var options = {
+        args:
+            [
+                req.body.username,
+                req.session.username
+            ]
+    }
+    PythonShell.run('public/python/changeUsername.py', options, function (err) {
+        if (err) res.send(err)
+        console.log("database updated")
+    })
+    res.redirect("/views/changes.html")
+})
+
+app.post('/changePassword', function (req, res) {
+    let username = req.session.username
+    connection.query(`SELECT password FROM accounts WHERE username = ?`, [username], function (err, result) {
+        let oldDbPass = result[0].password 
+        if (req.body.oldPass != oldDbPass || req.body.newPass != req.body.newPassConf) { 
+           res.redirect("/views/error.html") 
+        }
+       else{
+        var options = {
+            args: [
+                req.body.newPass,
+                oldDbPass,
+                username
+            ]
+        }
+        PythonShell.run('public/python/changePassword.py', options, function (err) {
+            if (err) res.send(err)
+            console.log('database updated')
+            
+        })
+        res.redirect("/views/changes.html")
+}
+    })
+
+})
 app.listen(3000)
